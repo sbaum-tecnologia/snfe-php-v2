@@ -1,0 +1,26 @@
+{
+	"name" : "sbaum-tecnologia/snfe-php",
+	"description" : "SDK snfe para PHP.",
+	"keywords" : [
+		"snfe",
+		"snfe-php",
+		"snfe-php-sdk"
+	],
+	"homepage" : "https://github.com/snfe/snfe-php",
+	"license" : "GPL-3.0",
+	"authors" : [{
+			"name" : "Sbaum Tecnologia",
+			"email" : "suporte@sbaum.com.br",
+			"homepage" : "https://www.sbaum.com.br/"
+		}
+	],
+	"require" : {
+		"php" : ">=5.5.0",
+		"guzzlehttp/guzzle" : "^6.0"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"SNFe\\" : "src"
+		}
+	}
+}
