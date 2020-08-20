@@ -15,7 +15,7 @@ Este pacote consiste em um SDK em PHP para a utilizacao do sistema SNFe através
 Via Composer
 
 ```bash
-composer require sbaum-tecnologia/snfe-php-v2
+composer require sbaum-tecnologia/snfe-php-v2:dev-master
 ```
 
 ## Licença
