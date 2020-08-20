@@ -1,0 +1,5 @@
+{
+    "require": {
+        "sbaum-tecnologia/snfe-php-v2": "dev-master"
+    }
+}
