@@ -1,5 +1,5 @@
 <?php
-    require __DIR__.'/../../vendor/autoload.php';
+    require __DIR__.'/../vendor/autoload.php';
     use SNFe\Empresas;        
     // Coloca o Token SNFe  no environment do PHP.
     $snfe_token="";    

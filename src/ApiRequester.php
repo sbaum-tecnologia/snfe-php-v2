@@ -62,7 +62,7 @@ class ApiRequester
     public function response(ResponseInterface $response)
     {
         $this->lastResponse = $response;        
-        $content = $response->getBody()->getContents();        
+        $content = $response->getBody()->getContents();              
         if($response->getStatusCode()!="200"){
             throw new \Exception("Erro consumo API-SNFe : " . $content,$response->getStatusCode());
         }        

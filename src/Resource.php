@@ -31,13 +31,13 @@ abstract class Resource
      */
     public function url($id = null, $additionalEndpoint = null)
     {
-        $endpoint = $this->endpoint();
-        if (! is_null($id)) {
-            $endpoint .= '/' . $id;
-        }
+        $endpoint = $this->endpoint();        
         if (! is_null($additionalEndpoint)) {
             $endpoint .= '/' . $additionalEndpoint;
         }        
+        if (! is_null($id)) {
+            $endpoint .= '/' . $id;
+        }
         return $endpoint;
     }
     /**
