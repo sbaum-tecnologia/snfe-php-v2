@@ -1,12 +1,12 @@
 {
-	"name" : "sbaum-tecnologia/snfe-php",
+	"name" : "sbaum-tecnologia/snfe-php-v2",
 	"description" : "SDK snfe para PHP.",
 	"keywords" : [
 		"snfe",
 		"snfe-php",
 		"snfe-php-sdk"
 	],
-	"homepage" : "https://github.com/snfe/snfe-php",
+	"homepage" : "https://github.com/snfe/snfe-php-v2",
 	"license" : "GPL-3.0",
 	"authors" : [{
 			"name" : "Sbaum Tecnologia",
