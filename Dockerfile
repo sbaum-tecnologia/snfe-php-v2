@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:bionic
 ENV OS_LOCALE="pt_BR.UTF-8"
 RUN apt-get update && apt-get install -y locales && locale-gen ${OS_LOCALE}
 ENV LANG=${OS_LOCALE} \
@@ -37,14 +37,14 @@ RUN	\
 	&& chmod 755 /sbin/entrypoint.sh \
 	&& chown www-data:www-data ${PHP_DATA_DIR} -Rf
 
-COPY ./configs/apache2.conf ${APACHE_CONF_DIR}/apache2.conf
+#COPY ./configs/apache2.conf ${APACHE_CONF_DIR}/apache2.conf
 COPY ./configs/app.conf ${APACHE_CONF_DIR}/sites-enabled/app.conf
-COPY ./configs/php.ini  ${PHP_CONF_DIR}/apache2/conf.d/custom.ini
+#COPY ./configs/php.ini  ${PHP_CONF_DIR}/apache2/conf.d/custom.ini
 COPY ./configs/composer.json  var/www/app/composer.json
 
 WORKDIR /var/www/app/
 RUN composer install --no-interaction -o
-EXPOSE 80 8080
+EXPOSE 80 443
 
 # By default, simply start apache.
 CMD ["/sbin/entrypoint.sh"]

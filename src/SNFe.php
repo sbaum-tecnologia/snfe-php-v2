@@ -25,7 +25,7 @@ class SNFe
      */
     public static function getToken()
     {   
-        return static::$tokenEnvVar;
+        return getenv(static::$tokenEnvVar);
         
     }
     

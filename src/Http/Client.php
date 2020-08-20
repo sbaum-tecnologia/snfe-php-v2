@@ -16,14 +16,14 @@ class Client extends Guzzle
     public function __construct(array $config = [])
     {
                
-        $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
-
+        $host = SNFe::getApiBase();        
+        $token = SNFe::getToken();        
         $config = array_merge([
-            'base_uri'        => SNFe::getApiBase(),            
+            'base_uri'        => $host,            
             'headers' => [
                 'Content-Type' => 'application/json',
                 'User-Agent'   => trim('SNFe-PHP/' . SNFe::$sdkVersion . "; {$host}"),
-                'User-Authorization'   => 'Bearer ' . SNFe::getToken(),
+                'Authorization'   => 'Bearer ' . $token,
             ],
             'timeout' => 280,            
         ], $config);

@@ -74,10 +74,7 @@ abstract class Resource
      */
     public function retrieve($id)
    
-    {   
-        foreach (SNFe::getToken() as $key=>$value){
-            $params[$key] = $value;
-        }
+    {           
         return $this->apiRequester->request('GET', $this->url($id), ['query' => $params]);
         
     }
