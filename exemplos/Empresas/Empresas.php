@@ -51,7 +51,7 @@
                         'page'=>1,
                         'filtros'=>[['id','>','1']]];
         
-        $ret = $_serviceEmpresa->all();        
+        $ret = $_serviceEmpresa->all($_criterios);        
         echo "Total Empresas: " .  $ret->total_records . "<br/>";
     } catch (\Exception $e) {
         echo $e->getMessage()  . "-  Htttp Code: " . $e->getCode();
@@ -95,7 +95,7 @@
                         'page'=>1,
                         'filtros'=>[['id','>','1']]];
         
-        $ret = $_serviceEmpresa->all();        
+        $ret = $_serviceEmpresa->all($_criterios);        
         echo "Total Empresas: " .  $ret->total_records . "<br/>";
     } catch (\Exception $e) {
         echo $e->getMessage()  . "-  Htttp Code: " . $e->getCode();
